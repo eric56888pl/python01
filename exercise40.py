@@ -1,4 +1,3 @@
-'''---------- exericse 30'''
 text = '''
 Artificial Intelligence (AI) is a rapidly evolving field that involves the development of computer systems capable of performing tasks that typically require human intelligence such as 
 visual perception, speech recognition, and decision-making. AI systems can be trained using large amounts of data to recognize patterns and make predictions. Machine learning is a 
@@ -14,33 +13,10 @@ text1 = text.split()
 
 
 def map_longest(text1: str) -> tuple:
-    '''
-    Function returns the longest word in the text and it's length
-
-    Parameters:
-        text: any text
-
-    Returns:
-        tuple: a tuple containing the longest word and it's length
-
-    '''
-    '''the_longest_word = max(text1, key=lambda word: len(word))
-    return the_longest_word, len(the_longest_word)'''
-    the_longest_word = list(map(lambda item: (len(item), item), text1))
-    sorted_text1 = sorted(the_longest_word, reverse=True)
+    the_longest = list(map(lambda item: (len(item), item), text1))
+    sorted_text1 = sorted(the_longest, reverse=True)
     print(
-        f"The longest word in the text is '{sorted_text1[0][1]}' with the length of {sorted_text1[0][0]} characters.")
-    # sorting order from the word length
-    '''
-    my_text = text.split()
-    result = list(map(lambda item: (len(item), item), my_text))
-    sorted_text = sorted(result, reverse=True)
-    longest = sorted_text[0]
-    text = (
-        f'The longest word in the text is {longest[1]} with the length of {longest[0]} characters')
-    return text'''
+        f"the longest is '{sorted_text1[0][1]}' it is with {sorted_text1[0][0]} words.")
 
 
 map_longest(text1)
-
-'''-------------------------------'''
